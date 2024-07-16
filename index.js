@@ -44,4 +44,34 @@ console.log("------ciclos--------");
 // for
 for(let i = 0; i < 10; i++){
     console.log(i);
+
 }
+//while
+console.log("------while--------");
+let contador = 0
+while(contador < 5){
+    console.log(contador);
+    ++contador;
+}
+// imprimir todos los numeros pares del 1 al 100
+console.log("------ejercicio pares--------");
+for(let i = 0; i <= 100; ++i)
+    if(i%2 ==0){
+        console.log(i)
+    }
+console.log("-----------arreglos---------")
+let numeros = [];
+console.log("numeros-->" , numeros);
+numeros.push(10);
+numeros.push(20);
+numeros.push(30);
+console.log("numeros-->" , numeros);
+//quitar numeros
+numeros.pop();
+console.log("numeros-->" , numeros);
+
+
+
+    
+
+
