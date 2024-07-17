@@ -26,7 +26,7 @@ function funcion_orden_superior(operacion){
 }
 funcion_orden_superior(multiplicar); 
 
-// ejercicio
+// ejercicio fabrica de funciones
 
 function crear_operacion(operador) {
     let operacion;
@@ -44,4 +44,33 @@ function crear_operacion(operador) {
 
 let operacion = crear_operacion('*');
 let resultado = operacion(2, 5);
-console.log(resultado)
+console.log(resultado);
+
+// for in range
+
+let numeros = [];
+for(i=0; i < 200; i++){
+    numeros.push(i)
+}
+
+numeros.forEach(element => {
+    console.log(element);
+    
+});
+
+//trasnformar los datos del arreglo
+
+let cambiar = numeros.map( element => element = element * 2);
+console.log("cambios", cambiar);
+// buscar en el arreglo
+
+let filtrar_arreglo = numeros.filter(element => (element > 150));
+console.log("filtros numeros", filtrar_arreglo)
+
+// obtener frutas que inician con la letra
+
+let frutas = ["manzana", "peras", "durazno", "sandia", "piña"];
+let frutas_p = frutas.filter( element => (element.charAt(0) == "p")
+
+)
+console.log("inicia con p", frutas_p);
