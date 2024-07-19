@@ -5,7 +5,7 @@ let telefonos = {
 }
 console.log("numeros_tel", telefonos);
 
-let objpersona_1  = {
+let objpersona_1 = {
     nombre: "andres",
     apellido: "hernadez",
     email: "anhernadez",
@@ -13,7 +13,7 @@ let objpersona_1  = {
 
 }
 
-let objpersona_2  = {
+let objpersona_2 = {
     nombre: "maria",
     apellido: "yepes",
     email: "mpyepes",
@@ -21,7 +21,7 @@ let objpersona_2  = {
 
 }
 
-let objpersona_3  = {
+let objpersona_3 = {
     nombre: "juan",
     apellido: "sierra",
     email: "jusierra",
@@ -29,10 +29,46 @@ let objpersona_3  = {
 
 }
 
-let personas = {
-    pers_1: objpersona_1,
-    pers_2: objpersona_2,
-    pers_3: objpersona_3,
+let personas = [objpersona_1, objpersona_2, objpersona_3];
+personas.forEach(objpersona => {
+    console.log(objpersona.nombre)
+    
+});
+
+
+function agregarpersonas(objpersona){
+    if( objpersona.nombre != null 
+        && objpersona.apellido != null 
+        && objpersona.email != null 
+        && objpersona.telefono != null){
+        personas.push(objpersona)
+    }
+}
+let objpersona_4 = {
+    nombre: "henry",
+    apellido: "galvis",
+    email: "henry",
+    telefono: telefonos,
+
+}
+
+agregarpersonas(objpersona_4);
+console.log(personas);
+
+function crearobjeto (nombre, apellido, email, telefono){
+    let objpersona ={
+        nombre,
+        apellido,
+        email,
+        telefono,
+    }
+    return objpersona
     
 }
-console.log("personas", personas);
+let objpersona = crearobjeto("andres", "goez", "goez@", "4540157");
+personas.push(objpersona);
+console.log(personas);
+
+
+
+
